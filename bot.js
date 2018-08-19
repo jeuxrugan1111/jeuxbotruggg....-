@@ -25,30 +25,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(` AG SERVER.`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
-});
-
-client.on('message', message => {
-  if (!message.content.startsWith(PREFIX)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id !== "408926307372498945") return;
-
-if (message.content.startsWith(PREFIX + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/darkknite55");
-	 console.log('test' + argresult);
-    message.channel.sendMessage(`Streaming: **${argresult}`)
-}
-
-if (message.content.startsWith(PREFIX + 'setname')) {
-  client.user.setUsername(argresult).then
-	  message.channel.sendMessage(`تم تغيير آسم البوت بنجآح **${argresult}**`)
-  return message.reply("** لا يمكنك تغيير تغيير آسم البوت الآن آلا بعد سآعتين **");
-}
-if (message.content.startsWith(PREFIX + 'setavatar')) {
-  client.user.setAvatar(argresult);
-   message.channel.sendMessage(`تم تغيير صورة البوت بنجآح **${argresult}**`);
-}
-});
 
 
 client.login(process.env.BOT_TOKEN);
