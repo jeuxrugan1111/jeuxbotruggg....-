@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "p!";
+var prefix = "#d";
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
@@ -23,7 +23,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : PREDATOR ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` AG SERVER.`,"http://twitch.tv/S-F")
+client.user.setGame(`DARK SERVER`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
