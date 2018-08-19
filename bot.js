@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "#d";
+const PREFIX = '$';
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
