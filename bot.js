@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const PREFIX = '$';
+var prefix = "#d";
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
@@ -26,7 +26,6 @@ client.on('ready', () => {
 client.user.setGame(` AG SERVER.`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
-
 
 client.on('message', message => {
   if (!message.content.startsWith(PREFIX)) return;
