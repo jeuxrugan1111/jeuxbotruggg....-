@@ -50,5 +50,6 @@ if (message.content.startsWith(PREFIX + 'setavatar')) {
    message.channel.sendMessage(`تم تغيير صورة البوت بنجآح **${argresult}**`);
 }
 });
-	
+
+
 client.login(process.env.BOT_TOKEN);
