@@ -29,7 +29,7 @@ client.user.setStatus("dnd")
 
 
 client.on('message', message => {
-var prefix = "#d";
+var prefix = "2";
  
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
