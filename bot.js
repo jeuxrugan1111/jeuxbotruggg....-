@@ -26,6 +26,8 @@ client.on('ready', () => {
 client.user.setGame(` AG SERVER.`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
+
+
 client.on('message', message => {
 var prefix = "#d";
  
