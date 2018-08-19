@@ -34,7 +34,7 @@ var prefix = "#d";
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == '477039396726505472' ) return;
+  if (message.author.id == '408926307372498945' ) return;
  
 if (message.content.startsWith(prefix + 'setstream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
