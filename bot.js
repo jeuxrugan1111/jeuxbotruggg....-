@@ -29,29 +29,26 @@ client.user.setStatus("dnd")
 
 
 client.on('message', message => {
-var prefix = "#d";
- 
-  if (!message.content.startsWith(prefix)) return;
+  if (!message.content.startsWith(PREFIX)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == '477039396726505472' ) return;
- 
-if (message.content.startsWith(prefix + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
-    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
-} else
- 
-if (message.content.startsWith(prefix + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
-  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
-} else
+  if (message.author.id !== "408926307372498945") return;
 
-if (message.content.startsWith(prefix + 'setimg')) {
+if (message.content.startsWith(PREFIX + 'setstream')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/darkknite55");
+	 console.log('test' + argresult);
+    message.channel.sendMessage(`Streaming: **${argresult}`)
+}
+
+if (message.content.startsWith(PREFIX + 'setname')) {
+  client.user.setUsername(argresult).then
+	  message.channel.sendMessage(`تم تغيير آسم البوت بنجآح **${argresult}**`)
+  return message.reply("** لا يمكنك تغيير تغيير آسم البوت الآن آلا بعد سآعتين **");
+}
+if (message.content.startsWith(PREFIX + 'setavatar')) {
   client.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+   message.channel.sendMessage(`تم تغيير صورة البوت بنجآح **${argresult}**`);
 }
 });
-
 	
 client.login(process.env.BOT_TOKEN);
